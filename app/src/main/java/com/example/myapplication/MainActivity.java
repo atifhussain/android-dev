@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.d(msg, "The onResume() event : step-3");
+        startService(new Intent(getBaseContext(), MyService.class));
+
     }
 
     /** Called when another activity is taking focus. */
@@ -35,6 +39,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.d(msg, "The onPause() event : step-4");
+    }
+
+    /*
+    * Service Example integrated
+    * */
+
+    // Method to start the service
+    public void startService(View view) {
+        startService(new Intent(getBaseContext(), MyService.class));
+    }
+
+    // Method to stop the service
+    public void stopService(View view) {
+        stopService(new Intent(getBaseContext(), MyService.class));
     }
 
     /** Called when the activity is no longer visible. */
