@@ -39,4 +39,13 @@
         android:src="@android:mipmap/sym_def_app_icon" />
 
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:text="Broadcast Intent"
+        android:onClick="broadcastIntent"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
