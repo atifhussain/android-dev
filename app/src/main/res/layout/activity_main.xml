@@ -18,25 +18,50 @@
     android:transitionGroup="false"
     android:visibility="visible">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world"
-        android:autoLink="web"
-        android:id="@+id/textView" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/button2"
+        android:text="Add Name"
+        android:onClick="onClickAddName"
+        android:layout_below="@+id/editText"
         android:layout_alignParentStart="true"
-        android:background="@color/accent_material_dark"
-        android:maxWidth="300dp"
-        android:minHeight="300dp"
-        android:src="@android:mipmap/sym_def_app_icon" />
+        android:layout_alignEnd="@+id/editText" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText3" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:hint="Name"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:layout_below="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:hint="Grade"
+        android:textColorHint="@android:color/holo_blue_bright"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrive student"
+        android:id="@+id/button"
+        android:onClick="onClickRetrieveStudents"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/button2" />
 
 
 </RelativeLayout>
